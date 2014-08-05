@@ -16,8 +16,10 @@ lib/App/Commando/Program.pm
 t/00-compile.t
 t/00-report-prereqs.t
 t/command.t
+t/logger.t
 t/option.t
 t/presenter.t
+t/program.t
 xt/author/critic.t
 xt/author/pod-spell.t
 xt/release/cpan-changes.t

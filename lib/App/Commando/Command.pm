@@ -11,21 +11,14 @@ use App::Commando::Logger;
 use App::Commando::Option;
 use App::Commando::Presenter;
 
-has 'actions' => ( is => 'rw' );
-
-has 'aliases' => ( is => 'ro' );
-
-has 'commands' => ( is => 'rw' );
-
-has 'description' => ( is => 'rw' );
-
-has 'map' => ( is => 'ro' );
-
-has 'name' => ( is => 'ro' );
-
-has 'options' => ( is => 'rw' );
-
-has 'parent' => ( is => 'rw' );
+has 'actions'       => ( is => 'rw' );
+has 'aliases'       => ( is => 'ro' );
+has 'commands'      => ( is => 'rw' );
+has 'description'   => ( is => 'rw' );
+has 'map'           => ( is => 'ro' );
+has 'name'          => ( is => 'ro' );
+has 'options'       => ( is => 'rw' );
+has 'parent'        => ( is => 'rw' );
 
 sub BUILDARGS {
     my ($class, $name, $parent) = @_;
@@ -95,20 +88,20 @@ sub option {
 }
 
 sub command {
-    my ($self, $cmd_name) = @_;
+    my ($self, $command_name) = @_;
 
-    my $cmd = App::Commando::Command->new($cmd_name, $self);
-    $self->commands->{$cmd_name} = $cmd;
+    my $cmd = App::Commando::Command->new($command_name, $self);
+    $self->commands->{$command_name} = $cmd;
 
     return $cmd;
 }
 
 sub alias {
-    my ($self, $cmd_name) = @_;
+    my ($self, $command_name) = @_;
 
-    $self->logger->debug("adding alias to parent for self: $cmd_name");
-    push @{$self->aliases}, $cmd_name;
-    $self->parent->commands->{$cmd_name} = $self if defined $self->parent;
+    $self->logger->debug("adding alias to parent for self: $command_name");
+    push @{$self->aliases}, $command_name;
+    $self->parent->commands->{$command_name} = $self if defined $self->parent;
 }
 
 sub action {
@@ -254,7 +247,7 @@ App::Commando::Command
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 AUTHOR
 

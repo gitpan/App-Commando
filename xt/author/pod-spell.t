@@ -10,14 +10,15 @@ use Pod::Wordlist;
 add_stopwords(<DATA>);
 all_pod_files_spelling_ok( qw( bin lib  ) );
 __DATA__
+subcommand
 Michal
 Wojciechowski
 odyniec
 lib
 App
 Commando
-Option
-Presenter
-Program
 Command
+Option
+Program
+Presenter
 Logger

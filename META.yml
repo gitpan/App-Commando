@@ -34,22 +34,22 @@ no_index:
 provides:
   App::Commando:
     file: lib/App/Commando.pm
-    version: 0.010
+    version: 0.011
   App::Commando::Command:
     file: lib/App/Commando/Command.pm
-    version: 0.010
+    version: 0.011
   App::Commando::Logger:
     file: lib/App/Commando/Logger.pm
-    version: 0.010
+    version: 0.011
   App::Commando::Option:
     file: lib/App/Commando/Option.pm
-    version: 0.010
+    version: 0.011
   App::Commando::Presenter:
     file: lib/App/Commando/Presenter.pm
-    version: 0.010
+    version: 0.011
   App::Commando::Program:
     file: lib/App/Commando/Program.pm
-    version: 0.010
+    version: 0.011
 requires:
   Carp: 0
   Getopt::Long: 0
@@ -62,4 +62,4 @@ resources:
   bugtracker: https://github.com/odyniec/p5-App-Commando/issues
   homepage: https://github.com/odyniec/p5-App-Commando
   repository: https://github.com/odyniec/p5-App-Commando.git
-version: 0.010
+version: 0.011

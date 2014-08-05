@@ -3,14 +3,13 @@ package App::Commando::Logger;
 use strict;
 use warnings;
 
+use Carp;
 use Moo;
 use Scalar::Util qw(openhandle);
 
-has 'device' => ( is => 'ro' );
-
+has 'device'    => ( is => 'ro' );
 has 'formatter' => ( is => 'rw' );
-
-has 'level' => ( is => 'rw' );
+has 'level'     => ( is => 'rw' );
 
 sub BUILDARGS {
     my ($class, $device) = @_;
@@ -23,10 +22,12 @@ sub BUILDARGS {
 sub BUILD {
     my ($self) = @_;
 
-    if (!($self->{_fh} = openhandle($self->device)) &&
-        !open($self->{_fh}, '>>', $self->device))
-    {
-        # TODO: Error
+    eval {
+        $self->{_fh} = openhandle($self->device);
+        open($self->{_fh}, '>>', $self->device) if !defined $self->{_fh};
+    };
+    if ($@) {
+        croak 'Can\'t open log device';
     }
 
     return $self;
@@ -94,7 +95,7 @@ App::Commando::Logger
 
 =head1 VERSION
 
-version 0.010
+version 0.011
 
 =head1 AUTHOR
 
