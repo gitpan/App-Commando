@@ -87,7 +87,7 @@ App::Commando::Presenter
 
 =head1 VERSION
 
-version 0.011
+version 0.012
 
 =head1 AUTHOR
 

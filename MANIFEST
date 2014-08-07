@@ -15,6 +15,7 @@ lib/App/Commando/Presenter.pm
 lib/App/Commando/Program.pm
 t/00-compile.t
 t/00-report-prereqs.t
+t/argv.t
 t/command.t
 t/logger.t
 t/option.t

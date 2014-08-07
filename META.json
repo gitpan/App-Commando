@@ -71,27 +71,27 @@
    "provides" : {
       "App::Commando" : {
          "file" : "lib/App/Commando.pm",
-         "version" : "0.011"
+         "version" : "0.012"
       },
       "App::Commando::Command" : {
          "file" : "lib/App/Commando/Command.pm",
-         "version" : "0.011"
+         "version" : "0.012"
       },
       "App::Commando::Logger" : {
          "file" : "lib/App/Commando/Logger.pm",
-         "version" : "0.011"
+         "version" : "0.012"
       },
       "App::Commando::Option" : {
          "file" : "lib/App/Commando/Option.pm",
-         "version" : "0.011"
+         "version" : "0.012"
       },
       "App::Commando::Presenter" : {
          "file" : "lib/App/Commando/Presenter.pm",
-         "version" : "0.011"
+         "version" : "0.012"
       },
       "App::Commando::Program" : {
          "file" : "lib/App/Commando/Program.pm",
-         "version" : "0.011"
+         "version" : "0.012"
       }
    },
    "release_status" : "stable",
@@ -106,6 +106,6 @@
          "web" : "https://github.com/odyniec/p5-App-Commando"
       }
    },
-   "version" : "0.011"
+   "version" : "0.012"
 }
 
